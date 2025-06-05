@@ -1,4 +1,5 @@
 streamlit
-tensorflow
+tensorflow==2.12.0
 pillow
 numpy
+matplotlib
