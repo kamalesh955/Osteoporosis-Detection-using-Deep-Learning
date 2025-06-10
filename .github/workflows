@@ -1,0 +1,19 @@
+name: Empty Commit
+
+on:
+  schedule:
+    - cron: '0 */10 * * *'  # Runs every 10 hours
+
+jobs:
+  empty-commit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Create empty commit
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit --allow-empty -m "Empty commit to keep repository active"
+          git push
