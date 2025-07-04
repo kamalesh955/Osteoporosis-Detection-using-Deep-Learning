@@ -2,7 +2,7 @@ name: Empty Commit
 
 on:
   schedule:
-    - cron: '0 */10 * * *'  # Runs every 10 hours
+    - cron: '0 */24 * * *'  # Runs every 10 hours
   workflow_dispatch:  # Allows manual triggering
 
 permissions:
